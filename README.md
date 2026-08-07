@@ -24,6 +24,8 @@ Claude Code 위에서 돌아가는 개인 점성술사 템플릿이다. 서양 �
 
 세 파일 모두 `.gitignore`에 들어 있어서 커밋되지 않는다. 이름·생년월일시·출생지 같은 개인정보는 이 세 파일 밖(즉 커밋되는 파일)에는 절대 적지 말고, 혹시 실수로 들어갔다면 커밋하기 전에 꼭 지우자.
 
+이 세 파일과 별개로 `journal.local.md`(상담일지)도 gitignore돼 있는데, 이건 직접 채우는 파일이 아니라 "이거 상담일지에 남겨줘"라고 요청할 때마다 Claude가 대화 내용을 요약해서 채워나가는 파일이다. 자세한 기록 규칙은 `CLAUDE.md`의 "상담일지" 섹션 참고.
+
 4. 트랜짓 계산기가 필요하면 설치한다 (선택 — 아래 참고).
 
 ## 사용법
@@ -69,6 +71,7 @@ CLAUDE.md                  페르소나·운영 지침         (커밋됨, 개�
 CLAUDE.local.md            현재 상황·성향             (gitignore, 직접 작성)
 chart.local.md             서양 점성술 출생차트        (gitignore, 직접 작성)
 saju.local.md              사주팔자                   (gitignore, 직접 작성)
+journal.local.md           상담 이력                  (gitignore, 요청 시 Claude가 기록)
 scripts/transits.py        트랜짓 계산기               (커밋됨, 개인정보 없음)
 scripts/requirements.txt   트랜짓 계산기 의존성 (pyswisseph)
 ```
