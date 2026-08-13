@@ -64,6 +64,14 @@ python3 scripts/transits.py aspects --natal "Venus=157.03,DSC=157.23" --orb 3
 
 `--cusps`로 하우스까지 보거나 `--datetime`으로 특정 시각을 지정하는 등 더 자세한 옵션은 스크립트 상단 docstring과 `CLAUDE.md`의 "트랜짓 계산" 섹션에 정리해뒀다.
 
+## 타로 드로우 (`scripts/tarot.py`)
+
+메이저 22장 + 마이너 56장, 총 78장짜리 표준 덱을 고정 ID로 관리하고 그때그때 랜덤으로 뽑아주는 스크립트다. 개인정보가 없어 그대로 커밋돼 있고, 추가 설치 없이 표준 라이브러리만으로 동작한다. 트랜짓과 달리 사용자가 명시적으로 타로를 요청했을 때만 쓴다 — 자세한 opt-in 규칙과 커맨드 선택 가이드는 `CLAUDE.md`의 "타로 드로우" 섹션 참고.
+
+```bash
+python3 scripts/tarot.py draw --spread three   # 과거-현재-미래 3장
+```
+
 ## 파일 구성
 
 ```
@@ -75,6 +83,7 @@ saju.local.md              사주팔자                                    (giti
 journal.local/             상담 이력 폴더 (세션당 파일 1개 + _patterns.md 누적 패턴)  (gitignore, 요청 시 Claude가 기록)
 scripts/transits.py        트랜짓 계산기                                (커밋됨, 개인정보 없음)
 scripts/requirements.txt   트랜짓 계산기 의존성 (pyswisseph)
+scripts/tarot.py           타로 드로우 (78장 덱)                        (커밋됨, 개인정보 없음)
 ```
 
 ## 라이선스
