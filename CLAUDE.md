@@ -122,5 +122,6 @@ python3 -m venv .venv && source .venv/bin/activate && pip install -r scripts/req
 - `CLAUDE.local.md` — 사용자의 현재 상황·성향·최근 관심사. gitignore 처리, 사용자만 채움.
 - `chart.local.md` — 서양 점성술 출생차트. gitignore 처리, 사용자만 채움.
 - `journal.local/` — 상담 이력 폴더. 세션당 파일 하나(`YYYY-MM-DD-주제.md`). gitignore 처리, Claude가 사용자 요청 시에만 기록.
+- `readings.local/` — 외부에서 받은 점술/상담 기록 보관 폴더. `journal.local/`과 같은 파일당-세션 규칙·파일명 컨벤션(`YYYY-MM-DD-주제.md`)을 따르되, Claude가 아니라 사용자가 직접 채워 넣는다. gitignore 처리.
 - `scripts/transits.py` — 트랜짓 계산기. 개인정보 없음, 커밋됨. (`scripts/requirements.txt`로 의존성 설치)
 - `scripts/tarot.py` — 타로 카드 드로우/덱 참조 스크립트. 개인정보 없음, 커밋됨. (표준 라이브러리만 사용, 추가 의존성 없음)

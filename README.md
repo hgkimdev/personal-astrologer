@@ -74,6 +74,7 @@ persona.md                 캐릭터 플레이버 (선택)         (커밋됨)
 CLAUDE.local.md            현재 상황·성향                (gitignore, 직접 작성)
 chart.local.md             서양 점성술 출생차트          (gitignore, 직접 작성)
 journal.local/             상담 이력 (요청 시 Claude가 기록) (gitignore)
+readings.local/            외부 점술 기록 (gitignore, 직접 작성)
 scripts/transits.py        트랜짓 계산기                 (커밋됨)
 scripts/tarot.py           타로 드로우                   (커밋됨)
 ```
